@@ -50,7 +50,10 @@ $(document).ready(function(){
 		});
 
 
+		caja.click(function(){
+			$(this).css("background","pink");
 
+		});
 
 	
 });
