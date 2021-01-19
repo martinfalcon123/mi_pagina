@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>aprendiendo jquery</title>
+    <style type="text/css">
+        body{
+            color:white;
+            background-color:yellow;
+        }
+        #seccion1{
+            font-size:60px;
+            text-align:center;
+            background-image:url(https://cdn.pixabay.com/photo/2016/02/18/18/57/home-office-1207834_960_720.jpg);
+            background-size:contain;
+        }
+        #proyectos{
+            display:grid;
+            grid-template-columns:auto auto;
+
+        }
+        .proyecto img{
+            wight:50%%;
+        }
+
+
+      
+
+ </style>
+
+</head>
+	<body>
+
+        <section id="seccion1">
+    		<h1>Bienvenido</h1>
+
+        </section>
+        <section id="proyectos"></section>
+	</body> 
+        <script>
+        const datos=[{
+            img:"imagenes/js.png",
+            desc:'javascript',
+        },
+        {
+
+             img:"imagenes/html.png",
+            desc:'html',
+        },
+        {    
+            img:"imagenes/css.png",
+            desc:'css',
+            
+
+        }]
+    
+        console.log("hola mundo");
+        let proyectos = document.querySelector('#proyectos');
+        proyectos.style.background="red";
+
+
+
+        function dinamico(src,desc){
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src=src;
+            let p = document.createElement("p");
+            p.innerHTML = desc;
+            div.appendChild(img); 
+            div.appendChild(p);   
+            proyectos.appendChild(div); 
+                   
+
+        }
+
+        datos.forEach(({img,src})=> dinamico(img,src));
+
+    </script>
+
+</html> 
+
+

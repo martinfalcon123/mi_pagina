@@ -8,10 +8,13 @@ $(document).ready(function(){
 	function cambiaVerder(){
 		$(this).css("background","green");
 	}
-
+	 function cambiarTamaño(){
+		 $(this).css("padding","400px");
+	 }
 
 	caja.hover(cambiaRojo, cambiaVerder);
-
+	caja.hover(cambiarTamaño);
+	
 
 	//click
 
@@ -51,7 +54,7 @@ $(document).ready(function(){
 
 
 		caja.click(function(){
-			$(this).css("background","pink");
+			$(this).css ("padding","500px");
 
 		});
 
